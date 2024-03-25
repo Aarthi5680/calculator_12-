@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <h2 id="kj">Calculator</h2>
+    <div class="main">
+    <tabel>
+        <tr>
+            <td colspan="5" class="new"><input id="i1" class="i2"></td>
+        </tr>
+        <tr><br>
+            <td><button onclick="send(1)" class="hj">1</button></td>
+            <td><button onclick="send(2)" class="hj">2</button></td>
+            <td><button onclick="send(3)" class="hj">3</button></td>
+            <td><button onclick="send(4)" class="hj">4</button></td>
+            <td><button onclick="send(5)" class="hj">5</button></td>
+        </tr><br>
+        <tr>
+
+            <td><button onclick="send(6)" class="hj">6</button></td>
+            <td><button onclick="send(7)" class="hj">7</button></td>
+            <td><button onclick="send(8)" class="hj"> 8</button></td>
+            <td><button onclick="send(9)" class="hj">9</button></td>
+            <td><button onclick="send(0)" class="hj">0</button></td>
+
+        </tr><br>
+        <tr>
+
+            <td><button onclick="send('+')" class="hj">+</button></td>
+            <td><button onclick="send('-')"class="hj">-</button></td>
+            <td><button onclick="send('/')"class="hj">/</button></td>
+            <td><button onclick="send('*')" class="hj">*</button></td>
+            <td><button onclick="send('=')" class="hj">=</button></td>
+
+        </tr><br>
+        <tr>
+
+            <td><button onclick="send('log')" class="hj">log</button></td>
+            <td><button onclick="send('√')" class="hj">√</button></td>
+            <td><button onclick="send('1/x')"class="hj">1/x</button></td>
+            <td><button onclick="send('.')"class="hj" style="font-size: larger;">.</button></td>
+            <td><button onclick="send('AC')"class="hj">AC</button></td>
+
+        </tr>
+
+    </tabel>
+    </div>
+
+ <script>
+      function send(i)
+      {
+        x=document.getElementById("i1");
+        switch (i){
+            case 1:
+               x.value+=1; 
+            break;
+
+            case 2:
+               x.value+=2; 
+            break;
+
+            case 3:
+               x.value+=3; 
+            break;
+
+            case 4:
+               x.value+=4; 
+            break;
+
+            case 5:
+               x.value+=5; 
+            break;
+
+            case 6:
+               x.value+=6; 
+            break;
+
+            case 7:
+               x.value+=7; 
+            break;
+
+            case 8:
+               x.value+=8; 
+            break;
+
+            case 9:
+               x.value+=9; 
+            break;
+
+            case 0:
+               x.value+=0; 
+            break;
+
+
+            case '+':
+                x.value+='+'
+                break;
+
+
+                case '-':
+                x.value+='-'
+                break;
+
+                case '*':
+                x.value+='*'
+                break;
+
+                case '/':
+                x.value+='/'
+                break;
+
+
+            
+
+                case '.':
+                x.value+='.';
+                break;
+
+                case 'AC':
+                x.value="";
+                break;
+
+
+                case '=':
+                    result=eval(x.value);
+                    x.value=result;
+
+                break;
+
+                case 'log':
+                    result=eval(Math.log10(x.value));
+                    x.value=result;
+                break;
+
+
+                case '1/x':
+                    result=eval(1/x.value);
+                    x.value=result;
+                break;
+
+
+                case '√':
+                    result=eval(Math.sqrt(x.value));
+                    x.value=result;
+                break;
+
+                        
+
+  
+
+        }
+      }
+ </script>
+</body>
+</html>
